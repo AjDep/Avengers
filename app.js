@@ -1,0 +1,32 @@
+const express =require('express');
+const app =express(); //created an express application
+
+// In node when we are writing a request we had to write two requests but in this we only because we are using express.js we only have to write one line 
+// that is res.send("****your text****");
+// for example we had to write 
+//res.write(" The text");
+//res.end();
+
+//Traditional Method
+// app.listen(3000,function(){
+//     console.log("Listing on this port")
+// });
+//New Method
+app.listen(3000, ()=>{
+    console.log("Listing on this port")
+});
+//Get All
+app.get('/',(req,res)=>{
+    let avg=['Captain America','Iron man','Black Panther'];
+    res.send(avg);
+
+});
+//Get Para
+app.get('/para',(req,res)=>{
+    let avenger ={name:'Anjana Dep' ,id:'20221307'};
+    res.send(avenger);
+});
+
+app.get('/api/marvel',(req,res)=>{
+    res.send("This is te second page.")
+});
