@@ -27,6 +27,7 @@ app.get('/para',(req,res)=>{
     res.send(avenger);
 });
 
-app.get('/api/marvel',(req,res)=>{
-    res.send("This is te second page.")
+app.get('/marvel/:avengerId',(req,res)=>{
+    let OptinalParam= req.query.filterby;
+    res.send("you have requested for avenger id:"+req.params.avengerId+" and "+OptinalParam);
 });
