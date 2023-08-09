@@ -13,7 +13,7 @@ const app =express(); //created an express application
 // });
 //New Method
 app.listen(3000, ()=>{
-    console.log("Listing on this port")
+    console.log("Listing on this port 3000")
 });
 //Get All
 app.get('/',(req,res)=>{
