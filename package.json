@@ -13,5 +13,13 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjDep/Avengers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AjDep/Avengers/issues"
+  },
+  "homepage": "https://github.com/AjDep/Avengers#readme"
 }
