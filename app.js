@@ -15,6 +15,11 @@ const app =express(); //created an express application
 app.listen(3000, ()=>{
     console.log("Listing on this port 3000")
 });
+let avengerArray=[
+    {id:1,name:"Captain America"},
+    {id:2,name:"Thor"},
+    {id:3,name:"Black Widow"}
+];
 //Get All
 app.get('/',(req,res)=>{
     let avg=['Captain America','Iron man','Black Panther'];
@@ -30,4 +35,13 @@ app.get('/para',(req,res)=>{
 app.get('/marvel/:avengerId',(req,res)=>{
     let OptinalParam= req.query.filterby;
     res.send("you have requested for avenger id:"+req.params.avengerId+" and "+OptinalParam);
+});
+
+// GET with Params
+app.get("/avengers/:avengerId",(req,res)=>{
+    let avenger=avengerArray.find(a=>a,id === parseInt(req.params.avengerId));
+if(!avengerArray){
+    return res.status(404).send("The given Id is not in our System");
+}
+res.send(avenger);
 });
